@@ -1,15 +1,15 @@
 <div class="card mb-3" *ngIf ="items.length > 0">
     <div class="card-header bg-primary text-white">
-        Haftanın İpucu <span class="badge badge-info float-right">{{firstItem.tag}}</span>
+        Haftanın İpucu <span class="badge badge-info float-right">{{ firstItem.tag }}</span>
     </div>
 
     <div class="card-body">
-        <h5 class="card-title">{{firstItem.title}}</h5>
-        <p>{{firstItem.description}}</p>
+        <h5 class="card-title">{{ firstItem.title }}</h5>
+        <p>{{ firstItem.description }}</p>
 
     </div>
     <div class="card-footer small">
-        {{firstItem.date.toDate() | date :'dd.MM.yyyy HH:mm'}}
+        {{ firstItem.date.toDate() | date :'dd.MM.yyyy HH:mm' }}
     </div>
 
 </div>
@@ -17,6 +17,6 @@
 <ul class="list-group small">
     <li class="list-group-item list-group-item-primary">Geçen haftalar</li>
     <li class="list-group-item" *ngFor="let item of items">
-        {{item.date.toDate() | date: 'dd.MM.yyyy HH:mm'}} {{item.title}}
+        {{ item.date.toDate() | date: 'dd.MM.yyyy HH:mm' }} {{ item.title }}
     </li>
 </ul>
